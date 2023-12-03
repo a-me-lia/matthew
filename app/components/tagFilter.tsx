@@ -1,18 +1,14 @@
+import GetTagColor from "@/lib/tag";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const bgColors = [
-  "bg-red-500",
-  "bg-green-500",
-  "bg-blue-500",
-  "bg-purple-500",
-  "bg-orange-500",
-];
 
-const cats = ["electronics", "embedded", "C/C++", "ASM", "TCP/IP", "C2C", "pcb design", "other"];
+const ProjectCats = ["electronics", "embedded", "c/cpp", "ASM", "TCP/IP", "inter-chip", "pcb design", "other"];
+const BlogCats = ["engineering", "life", "music", "film", "food", "other"];
 
-export default function TagFilter() {
+export default function TagFilter({url}:{url:String}) {
+  const cats = url == "projects" ? ProjectCats : BlogCats
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -27,14 +23,6 @@ export default function TagFilter() {
     }
     return 1;
   });
-  let Δ: number[] = [];
-
-  for (let i = 0; i < tags.length; i++) {
-    Δ[i] =
-      ((tags[i].charCodeAt(0) + tags[i].charCodeAt(2)) %
-        bgColors.length) -
-      1;
-  }
 
   let notInTags: string[] = [];
   for (let i = 0; i < cats.length; i++) {
@@ -42,7 +30,6 @@ export default function TagFilter() {
       notInTags.push(cats[i]);
     }
   }
-  console.log(notInTags);
 
   function removeTag(tag: string) {
     let prevTags = tags;
@@ -50,10 +37,10 @@ export default function TagFilter() {
     if (prevTags?.indexOf(tag) != -1) {
       //if tag is already contained
       if (prevTags.length == 1) {
-        router.replace(`/projects`, { scroll: false }); //if only one tag, remove the query string alltogether
+        router.replace(`/${url}`, { scroll: false }); //if only one tag, remove the query string alltogether
       } else {
         prevTags?.splice(prevTags.indexOf(tag), 1);
-        router.replace(`/projects?tags=${prevTags}`, { scroll: false });
+        router.replace(`/${url}?tags=${prevTags}`, { scroll: false });
       }
     }
   }
@@ -63,13 +50,13 @@ export default function TagFilter() {
 
     let prevTags = searchParams.get("tags")?.split(",");
     if (!prevTags) {
-      router.replace(`/projects?tags=${tag}`, {
+      router.replace(`/${url}?tags=${tag}`, {
         scroll: false,
       });
       //if no tags present
     } else {
       prevTags.push(tag); //if there were already tags present
-      router.replace(`/projects?tags=${prevTags}`, { scroll: false });
+      router.replace(`/${url}?tags=${prevTags}`, { scroll: false });
     }
   }
 
@@ -77,7 +64,7 @@ export default function TagFilter() {
 
   return (
     <>
-      <p>Tags:</p>
+      <p>Filter by tags:</p>
       <ul
         className=" flex flex-row items-baseline mt-2 mb-6 h-6  max-w-full flex-wrap gap-x-1 gap-y-1.5"
         onClick={(e) => {
@@ -87,7 +74,7 @@ export default function TagFilter() {
         {tags.map((entry, index) => (
           <li
             className={`${
-              Δ[index] != -1 ? bgColors[Δ[index]] : "bg-gray-400"
+              GetTagColor(entry)
             } rounded-md px-2 text-[14px] h-full  flex flex-row items-center box-border    text-black text-opacity-100 hover:bg-opacity-0 bg-opacity-30 border-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 `}
             key={index}
             id={index.toString()}

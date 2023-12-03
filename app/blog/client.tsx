@@ -4,8 +4,8 @@ import { allBlogs } from "@/.contentlayer/generated";
 import { useSearchParams } from "next/navigation";
 import Balancer from "react-wrap-balancer";
 
-import TagFilter from "./tagFilter";
-import Tag from "./tag"
+import TagFilter from "./../components/tagFilter";
+import Tag from "./../components/tag"
 import H1 from "../components/styles/H1";
 
 export default function Client() {
@@ -17,7 +17,7 @@ export default function Client() {
       <h2 className=" text-lg mb-8 ">
         <Balancer> read about the world. and sometimes shrimp.</Balancer>
       </h2>
-      <TagFilter></TagFilter>
+      <TagFilter url="blog"></TagFilter>
 
       {allBlogs
         .sort((a, b) => {
@@ -52,7 +52,7 @@ export default function Client() {
               <div className="flex flex-row items-baseline ">
                 {" "}
 
-                <Tag tags={post.tags}></Tag>
+                <Tag url="blog" tags={post.tags}></Tag>
               </div>
             </div>
           </Link>

@@ -4,7 +4,7 @@ import { Mdx } from "../../components/mdx";
 import { allProjects } from "@/.contentlayer/generated";
 import Balancer from "react-wrap-balancer";
 
-import Tag from "../tag";
+import Tag from "../../components/tag";
 
 
 export async function generateMetadata({
@@ -102,7 +102,7 @@ export default async function Blog({ params }: { params: any }) {
           {formatDate(post.publishedAt)}
         </p>
         <div className="flex flex-row">
-          <Tag tags={post.tags}></Tag>
+          <Tag url={"projects"} tags={post.tags}></Tag>
         </div>
       </div>
       <Mdx code={post.body.code} />

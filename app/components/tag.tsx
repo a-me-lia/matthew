@@ -1,19 +1,12 @@
 "use client";
+import GetTagColor from "@/lib/tag";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
-const bgColors = [
-  "bg-red-500",
-  "bg-green-500",
-  "bg-blue-500",
-  "bg-purple-500",
-  "bg-orange-500",
-];
 
-
-export default function Tag({ tags }: { tags: string }) {
+export default function Tag({ tags, url }: { tags: string, url:String }) {
   let arr = tags.trim().split(",");
-  let Δ: number[] = [];
+
 
   arr.sort((a, b) => {
     if (a == "other") {
@@ -25,12 +18,6 @@ export default function Tag({ tags }: { tags: string }) {
     return 1;
   });
 
-  for (let i = 0; i < arr.length; i++) {
-    Δ[i] =
-      ((arr[i].charCodeAt(0) + arr[i].charCodeAt(2)) %
-        bgColors.length) -
-      1;
-  }
 
   const router = useRouter();
 
@@ -41,21 +28,21 @@ export default function Tag({ tags }: { tags: string }) {
   function updateParams(tag: string) {
     let prevTags = searchParams.get("tags")?.split(",");
     if (!prevTags)
-      router.replace(`/projects?tags=${tag}`, {
+      router.replace(`/${url}?tags=${tag}`, {
         scroll: false,
       });
     //if no tags present
     else if (prevTags?.indexOf(tag) != -1) {
       //if tag is already contained
       if (prevTags.length == 1) {
-        router.replace(`/projects`, { scroll: false }); //if only one tag, remove the query string alltogether
+        router.replace(`/${url}`, { scroll: false }); //if only one tag, remove the query string alltogether
       } else {
         prevTags?.splice(prevTags.indexOf(tag), 1);
-        router.replace(`/projects?tags=${prevTags}`, { scroll: false });
+        router.replace(`/${url}?tags=${prevTags}`, { scroll: false });
       }
     } else {
       prevTags.push(tag); //if there were already tags present
-      router.replace(`/projects?tags=${prevTags}`, { scroll: false });
+      router.replace(`/${url}?tags=${prevTags}`, { scroll: false });
     }
   }
 
@@ -77,7 +64,7 @@ export default function Tag({ tags }: { tags: string }) {
         <li
           // style={{background: `hsl(${Δ[index]}, 60%, 70%)`}}
           className={`${
-            entry !== "other" ? `${bgColors[Δ[index]]}` : "bg-gray-400"
+            GetTagColor(entry)
           } rounded-md px-2 text-[14px] h-min  text-black text-opacity-100  bg-opacity-30 hover:bg-opacity-80 transition-all duration-300 `}
           key={index}
           id={index.toString()}
