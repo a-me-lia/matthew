@@ -12,7 +12,7 @@ export default function Client() {
   const searchParams = useSearchParams();
 
   return (
-    <section className="min-h-screen bg-white mx-4 md:mx-auto md:w-[742px]  relative pt-32">
+    <section className="min-h-screen bg-white  relative">
       <H1>Projects</H1>
       <h2 className=" text-lg mb-8 ">
         <Balancer>My stuff</Balancer>

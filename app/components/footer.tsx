@@ -57,7 +57,7 @@ export default function Footer() {
           }`}
           onMouseEnter={() => setExpand(true)}
           onMouseLeave={() => {
-            if (scroll < getDocHeight()) {
+            if (true) {
               setExpand(false);
             }
           }}

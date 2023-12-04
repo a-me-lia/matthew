@@ -90,7 +90,7 @@ export default async function Blog({ params }: { params: any }) {
   }
 
   return (
-    <section className="min-h-screen bg-white mx-4  md:mx-auto md:w-[742px] mb-64  relative">
+    <section className="min-h-screen bg-white mb-64  relative">
       <script type="application/ld+json" suppressHydrationWarning>
         {JSON.stringify(post.structuredData)}
       </script>

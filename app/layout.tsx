@@ -57,7 +57,7 @@ export default function RootLayout({
         className={`${vietnam.variable} font-sans text-neutral-800  ${plexMono.variable} font-ibm bg-white `}
       >
         <Navbar/>
-          {children}
+          <div className='mt-36 md:mt-28 mb-48 mx-4 md:w-[742px] md:mx-auto'>{children}</div>
         <Footer/>
       </body>
     </html>
