@@ -7,6 +7,10 @@ interface MdxProps {
   code: string;
 }
 
+const InlineLink = (props:any) => {
+  return <span className="px-0 py-0 transition-all duration-300 hover:bg-orange-200 border-b-2 border-orange-500"><Link href={props.href}>{props.children}</Link></span>
+}
+
 const CustomLink = (props: any) => {
   const href = props.href;
 
@@ -55,7 +59,7 @@ const CustomLink = (props: any) => {
 
 const CustomP = (props: any) => {
   return (
-    <p className="fancy transition-opacity duration-500 mb-6">
+    <p className="fancy transition-opacity duration-500 mb-6 text-[14px]">
       {props.children}
     </p>
   );
@@ -116,6 +120,7 @@ const components = {
   hr: CustomHr,
   Image: ImageWithCaption,
   Link: CustomLink,
+  Inline: InlineLink,
 };
 
 export function Mdx({ code }: MdxProps) {
