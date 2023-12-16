@@ -28,7 +28,7 @@ export default function Page(){
 
             <div className={`${shown ? 'opacity-100' : 'opacity-0'} z-50 transition-all duration-[2500ms] mx-auto flex flex-col items-center mt-36`}>
                 <h1 className="text-7xl font-medium text-white">Welcome to Serendipity</h1>
-                <div className={` ${shown ? 'translate-y-96' : 'translate-y-0'} h-12 w-16 hover:translate-y-4 transition-all duration-[1500ms] delay-1000`}>       
+                <div className={` ${shown ? 'translate-y-96' : 'translate-y-0'} h-12 w-16 transition-all duration-[1500ms] delay-1000`}>       
 <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 9L12 17L20 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></div>
