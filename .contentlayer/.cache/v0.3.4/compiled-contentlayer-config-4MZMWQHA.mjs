@@ -1,13 +1,9 @@
+// contentlayer.config.js
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
-
-/** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
+var computedFields = {
   slug: {
     type: "string",
-    resolve: (doc) =>
-      doc._raw.flattenedPath.includes("blog")
-        ? doc._raw.flattenedPath.slice(doc._raw.flattenedPath.indexOf("/") + 1)
-        : doc._raw.flattenedPath.slice(doc._raw.flattenedPath.indexOf("/") + 1),
+    resolve: (doc) => doc._raw.flattenedPath.includes("blog") ? doc._raw.flattenedPath.slice(doc._raw.flattenedPath.indexOf("/") + 1) : doc._raw.flattenedPath.slice(doc._raw.flattenedPath.indexOf("/") + 1)
   },
   structuredData: {
     type: "object",
@@ -18,113 +14,114 @@ const computedFields = {
       datePublished: doc.publishedAt,
       dateModified: doc.publishedAt,
       description: doc.summary,
-      image: doc.image
-        ? `https://homescree.net/${doc.image}`
-        : `https://homescree.net/og?title=${doc.title}`,
+      image: doc.image ? `https://homescree.net/${doc.image}` : `https://homescree.net/og?title=${doc.title}`,
       tags: doc.tags,
       url: `https://homescree.net/blog/${doc._raw.flattenedPath}`,
       author: {
         "@type": "Person",
-        name: "Matthew Guo",
-      },
-    }),
-  },
+        name: "Matthew Guo"
+      }
+    })
+  }
 };
-
-export const Blog = defineDocumentType(() => ({
+var Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: `blog/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
-      required: true,
+      required: true
     },
     publishedAt: {
       type: "string",
-      required: true,
+      required: true
     },
     summary: {
       type: "string",
-      required: true,
+      required: true
     },
     image: {
-      type: "string",
+      type: "string"
     },
     tags: {
       type: "string",
-      required: true,
+      required: true
     },
     image: {
-      type: "string",
-    },
+      type: "string"
+    }
   },
-  computedFields,
+  computedFields
 }));
-
-export const Literature = defineDocumentType(() => ({
+var Literature = defineDocumentType(() => ({
   name: "Literature",
   filePathPattern: `literature/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
-      required: true,
+      required: true
     },
     publishedAt: {
       type: "string",
-      required: true,
+      required: true
     },
     summary: {
       type: "string",
-      required: true,
+      required: true
     },
     image: {
-      type: "string",
+      type: "string"
     },
     tags: {
       type: "string",
-      required: true,
+      required: true
     },
     image: {
-      type: "string",
-    },
+      type: "string"
+    }
   },
-  computedFields,
+  computedFields
 }));
-
-export const Film = defineDocumentType(() => ({
+var Film = defineDocumentType(() => ({
   name: "Film",
   filePathPattern: `film/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
-      required: true,
+      required: true
     },
     publishedAt: {
       type: "string",
-      required: true,
+      required: true
     },
     summary: {
       type: "string",
-      required: true,
+      required: true
     },
     image: {
-      type: "string",
+      type: "string"
     },
     tags: {
       type: "string",
-      required: true,
+      required: true
     },
     image: {
-      type: "string",
-    },
+      type: "string"
+    }
   },
-  computedFields,
+  computedFields
 }));
-
-export default makeSource({
+var contentlayer_config_default = makeSource({
   contentDirPath: "content",
-  documentTypes: [Blog, Literature, Film],
+  documentTypes: [Blog, Literature, Film]
 });
+export {
+  Blog,
+  Film,
+  Literature,
+  contentlayer_config_default as default
+};
+//# sourceMappingURL=compiled-contentlayer-config-4MZMWQHA.mjs.map

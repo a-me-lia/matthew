@@ -47,14 +47,16 @@ var Blog = defineDocumentType(() => ({
     tags: {
       type: "string",
       required: true
+    },
+    image: {
+      type: "string"
     }
   },
   computedFields
 }));
-var Project = defineDocumentType(() => ({
-  name: "Project",
-  contentDirPath: "",
-  filePathPattern: `projects/**/*.mdx`,
+var Literature = defineDocumentType(() => ({
+  name: "Blog",
+  filePathPattern: `blog/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -66,7 +68,8 @@ var Project = defineDocumentType(() => ({
       required: true
     },
     summary: {
-      type: "string"
+      type: "string",
+      required: true
     },
     image: {
       type: "string"
@@ -74,17 +77,51 @@ var Project = defineDocumentType(() => ({
     tags: {
       type: "string",
       required: true
+    },
+    image: {
+      type: "string"
+    }
+  },
+  computedFields
+}));
+var Film = defineDocumentType(() => ({
+  name: "Blog",
+  filePathPattern: `blog/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true
+    },
+    publishedAt: {
+      type: "string",
+      required: true
+    },
+    summary: {
+      type: "string",
+      required: true
+    },
+    image: {
+      type: "string"
+    },
+    tags: {
+      type: "string",
+      required: true
+    },
+    image: {
+      type: "string"
     }
   },
   computedFields
 }));
 var contentlayer_config_default = makeSource({
   contentDirPath: "content",
-  documentTypes: [Blog, Project]
+  documentTypes: [Blog, Literature, Film]
 });
 export {
   Blog,
-  Project,
+  Film,
+  Literature,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-EKHAQ2SH.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-TPGXQVNT.mjs.map

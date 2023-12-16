@@ -1,6 +1,5 @@
 "use client";
-
-import { allBlogs } from "@/.contentlayer/generated";
+import { allLiterature } from "@/.contentlayer/generated";
 import { useSearchParams } from "next/navigation";
 import Balancer from "react-wrap-balancer";
 
@@ -14,13 +13,13 @@ export default function Client() {
 
   return (
     <section className="min-h-screen bg-white mx-4 md:mx-auto md:w-[742px]  relative pt-32 ">
-      <H1>blog :w:</H1>
+      <H1>Literature :w:</H1>
       <h2 className=" text-lg mb-8 ">
         <Balancer> read about the world. and sometimes shrimp.</Balancer>
       </h2>
-      <TagFilter url="blog"></TagFilter>
+      <TagFilter url="Literature"></TagFilter>
 
-      {allBlogs
+      {allLiterature
         .sort((a, b) => {
           if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
             return -1;
@@ -42,7 +41,7 @@ export default function Client() {
           return postHasActive;
         })
         .map((post) => (
-          <PostCard postUrl={`/blog/${post.slug}`} url="blog" tag={post.tags} title={post.title} image={post.image} desc={post.summary}></PostCard>
+          <PostCard postUrl={`/blog/${post.slug}`} url="literature" tag={post.tags} title={post.title} image={post.image} desc={post.summary}></PostCard>
         ))}
     </section>
   );

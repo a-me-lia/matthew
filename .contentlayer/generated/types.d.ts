@@ -24,14 +24,30 @@ export type Blog = {
   structuredData: object
 }
 
-export type Project = {
+export type Film = {
   /** File path relative to `contentDirPath` */
   _id: string
   _raw: Local.RawDocumentData
-  type: 'Project'
+  type: 'Film'
   title: string
   publishedAt: string
-  summary?: string | undefined
+  summary: string
+  image?: string | undefined
+  tags: string
+  /** MDX file body */
+  body: MDX
+  slug: string
+  structuredData: object
+}
+
+export type Literature = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Literature'
+  title: string
+  publishedAt: string
+  summary: string
   image?: string | undefined
   tags: string
   /** MDX file body */
@@ -48,8 +64,8 @@ export type Project = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Blog | Project
-export type DocumentTypeNames = 'Blog' | 'Project'
+export type DocumentTypes = Blog | Film | Literature
+export type DocumentTypeNames = 'Blog' | 'Film' | 'Literature'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -57,7 +73,8 @@ export type NestedTypeNames = never
 export type DataExports = {
   allDocuments: DocumentTypes[]
   allBlogs: Blog[]
-  allProjects: Project[]
+  allLiterature: Literature[]
+  allFilms: Film[]
 }
 
 
@@ -78,7 +95,8 @@ declare global {
 
 export type DocumentTypeMap = {
   Blog: Blog
-  Project: Project
+  Film: Film
+  Literature: Literature
 }
 
 export type NestedTypeMap = {

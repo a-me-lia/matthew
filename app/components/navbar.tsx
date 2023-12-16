@@ -12,13 +12,17 @@ const navItems = {
     name: "blog",
     id: "1",
   },
-  "/projects": {
-    name: "projects",
+  "/literature": {
+    name: "literature",
     id: "2",
+  },
+  "/film": {
+    name: "film",
+    id: "3",
   },
   "/contact": {
     name: "contact",
-    id: "3",
+    id: "4",
   },
 };
 
@@ -40,9 +44,9 @@ export default function Navbar() {
   let level = pathitems.length;
 
   return (
-    <nav className="flex flex-col text-[18px] tracking-tighter font-mono ">
-      <div className="md:mx-auto md:w-[742px]  mx-4 h-max  flex flex-col fixed right-0 top-0 left-0 z-50 bg-gradient-to-b pb-4 from-white via-white to-transparent via-90% ">
-        <div className="flex flex-row md:mt-8 mt-10 ">
+    <nav className="flex flex-col text-[18px] font-medium tracking-tighter font-mono rounded-2xl ">
+      <div className="md:mx-auto md:w-[742px]  mx-4 h-max  flex flex-col fixed right-0 top-0 left-0 z-50 md:mt-8 mt-10 p-4  rounded-2xl bg-black/20 ">
+        <div className="flex flex-row ">
           <div className="flex flex-row items-baseline -mr-6 ">
             <Link href={"/"} className="md:block hidden" id="homescree.net">
               matthewguo.com&nbsp; / &nbsp;
@@ -55,7 +59,7 @@ export default function Navbar() {
                   key={path}
                   href={path}
                   className={`pr-6 ${
-                    isActive ? "text-neutral-900" : "text-neutral-300"
+                    isActive ? "text-neutral-900" : "text-white"
                   } transition-colors duration-1000`}
                 >
                   <p id={id}>{name}</p>
@@ -64,7 +68,7 @@ export default function Navbar() {
             })}
           </div>
 
-          <h2 className=" md:block hidden">
+          <h2 className=" md:block hidden text-neutral-900">
             {level >= 2 && (
               <Link
                 className=" hover:text-neutral-500 transition-colors duration-200"
@@ -89,9 +93,9 @@ export default function Navbar() {
           </h2>
         </div>
 
-        <div className=" bg-gray-200 h-[1px] mt-2 "></div>
+        <div className="md:hidden bg-gray-200 h-[1px] mt-2 "></div>
 
-        <div className=" md:hidden h-4 mt-2 mb-2 text-[14px] text-neutral-500 flex flex-row">
+        <div className=" md:hidden h-4 mt-2 mb-2 text-[14px] text-neutral-900 flex flex-row">
           <Link href={"/home"} className="mr-1  hover:text-neutral-400">
             matthewguo.com{" "}
           </Link>

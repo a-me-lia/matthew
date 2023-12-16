@@ -4,11 +4,11 @@ import { Suspense } from "react";
 import Client from "./client";
 
 export const metadata: Metadata = {
-  title: "Projects | Matthew Guo",
-  description: "The stuff I brought into this world",
+  title: "Blog | Matthew Guo",
+  description: "A place where I put things I love",
 };
 
-export default async function ProjectsPage() {
+export default async function BlogPage() {
 
   return (
     <>

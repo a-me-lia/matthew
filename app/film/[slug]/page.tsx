@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Mdx } from "../../components/mdx";
-import { allProjects } from "@/.contentlayer/generated";
+import { allFilms } from "@/.contentlayer/generated";
 import Balancer from "react-wrap-balancer";
 
 import Tag from "../../components/tag";
@@ -12,7 +12,7 @@ export async function generateMetadata({
 }: {
   params: any;
 }): Promise<Metadata | undefined> {
-  const post = allProjects.find((post) => post.slug === params.slug);
+  const post = allFilms.find((post) => post.slug === params.slug);
   if (!post) {
     return;
   }
@@ -37,7 +37,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `https://matthewguo.com/blog/${slug}`,
+      url: `https://matthewguo.com/film/${slug}`,
       images: [
         {
           url: ogImage,
@@ -83,7 +83,7 @@ function formatDate(date: string) {
 }
 
 export default async function Blog({ params }: { params: any }) {
-  const post = allProjects.find((post) => post.slug === params.slug);
+  const post = allFilms.find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -102,7 +102,7 @@ export default async function Blog({ params }: { params: any }) {
           {formatDate(post.publishedAt)}
         </p>
         <div className="flex flex-row">
-          <Tag url={"projects"} tags={post.tags}></Tag>
+          <Tag url="blog" tags={post.tags}></Tag>
         </div>
       </div>
       <Mdx code={post.body.code} />
