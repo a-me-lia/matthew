@@ -12,17 +12,21 @@ const navItems = {
     name: "blog",
     id: "1",
   },
-  "/literature": {
-    name: "literature",
-    id: "2",
+  "/music": {
+    name: "music",
+    id: "3",
   },
   "/film": {
     name: "film",
     id: "3",
   },
+  "/literature": {
+    name: "literature",
+    id: "4",
+  },
   "/contact": {
     name: "contact",
-    id: "4",
+    id: "5",
   },
 };
 
@@ -31,7 +35,16 @@ export default function Navbar() {
   if (pathname.includes("/blog")) {
     pathname = "/blog";
   }
-  if (pathname.includes("/resume")) {
+  if (pathname.includes("/music")) {
+    pathname = "/music";
+  }
+  if (pathname.includes("/film")) {
+    pathname = "/film";
+  }
+  if (pathname.includes("/literature")) {
+    pathname = "/literature";
+  }
+  if (pathname.includes("/home")) {
     pathname = "/home";
   }
   if (pathname.includes("/home")) {

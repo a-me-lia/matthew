@@ -12,12 +12,12 @@ export default function Client() {
   const searchParams = useSearchParams();
 
   return (
-    <section className="min-h-screen bg-white mx-4 md:mx-auto md:w-[742px]  relative pt-32 ">
-      <H1>Literature :w:</H1>
+    <section className="min-h-[200vh] bg-white mx-4 md:mx-auto md:w-[742px]  relative pt-32 ">
+      <H1>Literature and Art</H1>
       <h2 className=" text-lg mb-8 ">
-        <Balancer> read about the world. and sometimes shrimp.</Balancer>
+        <Balancer>The important (and sometimes not so important) parts of existence</Balancer>
       </h2>
-      <TagFilter url="Literature"></TagFilter>
+      <TagFilter url="literature"></TagFilter>
 
       {allLiterature
         .sort((a, b) => {
@@ -41,7 +41,7 @@ export default function Client() {
           return postHasActive;
         })
         .map((post) => (
-          <PostCard postUrl={`/blog/${post.slug}`} url="literature" tag={post.tags} title={post.title} image={post.image} desc={post.summary}></PostCard>
+          <PostCard postUrl={`/literature/${post.slug}`} url="literature" tag={post.tags} title={post.title} image={post.image} desc={post.summary}></PostCard>
         ))}
     </section>
   );
