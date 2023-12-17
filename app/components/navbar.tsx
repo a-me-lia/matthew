@@ -20,8 +20,8 @@ const navItems = {
     name: "film",
     id: "3",
   },
-  "/literature": {
-    name: "literature",
+  "/meta": {
+    name: "meta",
     id: "4",
   },
   "/contact": {
@@ -41,8 +41,8 @@ export default function Navbar() {
   if (pathname.includes("/film")) {
     pathname = "/film";
   }
-  if (pathname.includes("/literature")) {
-    pathname = "/literature";
+  if (pathname.includes("/meta")) {
+    pathname = "/meta";
   }
   if (pathname.includes("/home")) {
     pathname = "/home";

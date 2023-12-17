@@ -3,10 +3,13 @@ import Link from "next/link";
 import SignUpButton from "./signupbutton";
 import useWindowSize from "@/lib/window";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 import H1 from "./styles/H1";
 
 export default function Footer() {
+  const path = usePathname();
   const width = useWindowSize();
   const [expand, setExpand] = useState(false);
 
@@ -48,6 +51,7 @@ export default function Footer() {
 
   return (
     <>
+
       {width >= 768 && (
         <div
           className={`transition-all duration-[0.8s] ease-in-out fixed bottom-0 w-full  overflow-hidden text-white  ${
@@ -67,7 +71,7 @@ export default function Footer() {
               <div
                 className={`flex ${
                   expand ? "opacity-100" : "opacity-0"
-                } flex-col-reverse md:flex-row justify-between  md:px-32 sm:px-2 items-center  transition-opacity duration-1000 h-full `}
+                } flex-col-reverse md:flex-row justify-between  md:px-64 sm:px-2 items-center  transition-opacity duration-1000 h-full `}
               >
                 <div className="flex flex-row items-center md:space-x-6">
                   <H1>Matthew Guo</H1>
@@ -129,8 +133,13 @@ export default function Footer() {
           <div className="fixed bottom-1 left-2 text-[12px] text-black/25">
             Matthew Guo
           </div>
+          
         </div>
       )}
+
+<div className={`${expand && path != '/home' ? "bottom-0 opacity-100" : "bottom-[-128px] opacity-0"} fixed  transition-all  duration-700 delay-500 bottom-0 right-0 z-10 h-64 w-48`}>
+                <Image src="/ansicgirl.png" alt='ansi c girl' fill className="object-cover"></Image>
+            </div>
     </>
   );
 }

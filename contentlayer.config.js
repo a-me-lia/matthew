@@ -62,9 +62,9 @@ export const Blog = defineDocumentType(() => ({
   computedFields,
 }));
 
-export const Literature = defineDocumentType(() => ({
-  name: "Literature",
-  filePathPattern: `literature/**/*.mdx`,
+export const Meta = defineDocumentType(() => ({
+  name: "Meta",
+  filePathPattern: `meta/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -126,5 +126,5 @@ export const Film = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [Blog, Literature, Film],
+  documentTypes: [Blog, Meta, Film],
 });

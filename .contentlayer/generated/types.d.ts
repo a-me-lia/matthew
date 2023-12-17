@@ -40,11 +40,11 @@ export type Film = {
   structuredData: object
 }
 
-export type Literature = {
+export type Meta = {
   /** File path relative to `contentDirPath` */
   _id: string
   _raw: Local.RawDocumentData
-  type: 'Literature'
+  type: 'Meta'
   title: string
   publishedAt: string
   summary: string
@@ -64,8 +64,8 @@ export type Literature = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Blog | Film | Literature
-export type DocumentTypeNames = 'Blog' | 'Film' | 'Literature'
+export type DocumentTypes = Blog | Film | Meta
+export type DocumentTypeNames = 'Blog' | 'Film' | 'Meta'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -73,7 +73,7 @@ export type NestedTypeNames = never
 export type DataExports = {
   allDocuments: DocumentTypes[]
   allBlogs: Blog[]
-  allLiterature: Literature[]
+  allMeta: Meta[]
   allFilms: Film[]
 }
 
@@ -96,7 +96,7 @@ declare global {
 export type DocumentTypeMap = {
   Blog: Blog
   Film: Film
-  Literature: Literature
+  Meta: Meta
 }
 
 export type NestedTypeMap = {

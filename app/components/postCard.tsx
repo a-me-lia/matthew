@@ -7,8 +7,8 @@ export default function PostCard({postUrl, title, image, desc, url, tag}:{postUr
 
 
     return(
-        <div className="w-full flex flex-row p-2 space-x-2 rounded-xl border-2">
-            <div className="relative w-2/3 h-48">
+        <div className="w-full flex flex-row p-2 space-x-2 rounded-xl border-2 mb-6">
+            <div className="relative w-2/3 h-48 shadow-[11px_-11px_22px_#ffffff]">
                 <div className="absolute flex flex-row items-center justify-center space-x-8 z-50 w-full h-full bg-black/40 rounded-xl opacity-0 z-0 hover:opacity-100 hover:z-50 transition-opacity duration-500">
                     <Link target="_blank" rel="noopener noreferrer" className="items-center flex flex-col" href={`/_next/image?url=${image}%0D&w=1920&&q=100`}>
                         <p className="text-white">view full image</p>
@@ -24,14 +24,14 @@ export default function PostCard({postUrl, title, image, desc, url, tag}:{postUr
     </g>
 </svg>
                     </Link>
-                    <Link href={postUrl} className="items-center flex flex-col">
+                    <Link href={postUrl} className="items-center flex flex-col ">
                         <p className="text-white">go to article</p>
                     <svg className="hover:translate-x-6 transition-translate duration-1000" width="64px" height="64px" viewBox="0 0 24 24" fill="none" >
 <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></Link>
             </div>
             {typeof image != 'undefined' && (
-            <Image src={image} alt={desc} fill className="object-cover z-40 rounded-xl"></Image>
+            <Image src={image} alt={desc} fill className="object-cover z-0 rounded-xl  shadow-[-11px_11px_22px_#949494]"></Image>
             )}
             </div>
             <div className="w-1 h-full bg-grey-300"></div>
@@ -39,7 +39,7 @@ export default function PostCard({postUrl, title, image, desc, url, tag}:{postUr
             <Link href={postUrl}>            <h2 className=" hover:underline text-[20px] font-medium">{title}</h2></Link>
 
             <Tag url={url} tags={tag}></Tag>
-            <h3 className="mt-4">{desc}</h3>
+            <h3 className="mt-4 text-[14px]">{desc}</h3>
             </div>
 
 

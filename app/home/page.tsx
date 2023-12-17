@@ -14,7 +14,7 @@ export default function Page(){
 
 
     return(
-        <main className="min-h-[200vh]">
+        <main className="flex flex-col relative min-h-[200vh]">
         <Link 
         activeClass="active" 
         to="next" 
@@ -23,7 +23,7 @@ export default function Page(){
         offset={200}
         duration={800} 
       >
-        <div className="flex flex-col  h-screen" onMouseEnter={()=>{setShown(true)}}>
+        <div className="flex flex-col relative h-screen" onMouseEnter={()=>{setShown(true)}}>
             <div className="absolute w-full h-full z-0">
                 <Image src='/weather.jpg' fill alt='falling from the sky' className="object-cover"></Image>
             </div>
@@ -39,12 +39,16 @@ export default function Page(){
         </div>
         </Link>
             <section id="next" className="w-[742px] mx-auto mt-48">
-                <h1>Hey, it's Matt!</h1>
-                <p>This website is still a work-in-progress, but you can take a look at some pages up already now:</p>
+                <h1 className="mb-4">Hey, it's Matt!</h1>
+                <p>This website is still a work-in-progress, but you can take a look at some pages up already now. She won't mind if you take a peek :p</p>
                 <ul>
                     {/* <li><Link href=></Link></li> */}
                 </ul>
             </section>
+
+            <div className="absolute bottom-0 right-0 z-10 h-64 w-48">
+                <Image src="/ansicgirl.png" alt='ansi c girl' fill className="object-cover"></Image>
+            </div>
 
 
         </main>
