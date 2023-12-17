@@ -71,9 +71,6 @@ var Meta = defineDocumentType(() => ({
       type: "string",
       required: true
     },
-    image: {
-      type: "string"
-    },
     tags: {
       type: "string",
       required: true
@@ -101,9 +98,6 @@ var Film = defineDocumentType(() => ({
       type: "string",
       required: true
     },
-    image: {
-      type: "string"
-    },
     tags: {
       type: "string",
       required: true
@@ -124,4 +118,4 @@ export {
   Meta,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-YQY7762E.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-CH3EXJ66.mjs.map

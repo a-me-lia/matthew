@@ -79,9 +79,6 @@ export const Meta = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    image: {
-      type: "string",
-    },
     tags: {
       type: "string",
       required: true,
@@ -109,9 +106,6 @@ export const Film = defineDocumentType(() => ({
     summary: {
       type: "string",
       required: true,
-    },
-    image: {
-      type: "string",
     },
     tags: {
       type: "string",

@@ -32,8 +32,8 @@ export type Film = {
   title: string
   publishedAt: string
   summary: string
-  image?: string | undefined
   tags: string
+  image?: string | undefined
   /** MDX file body */
   body: MDX
   slug: string
@@ -48,8 +48,8 @@ export type Meta = {
   title: string
   publishedAt: string
   summary: string
-  image?: string | undefined
   tags: string
+  image?: string | undefined
   /** MDX file body */
   body: MDX
   slug: string

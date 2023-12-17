@@ -12,7 +12,7 @@ export default async function sitemap() {
   }));
 
   const metas = allMeta.map((post) => ({
-    url: `https://matthewguo.com/literature/${post.slug}`,
+    url: `https://matthewguo.com/meta/${post.slug}`,
     lastModified: post.publishedAt,
   }));
 

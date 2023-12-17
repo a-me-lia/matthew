@@ -17,7 +17,7 @@ export default function Client() {
       <h2 className=" text-lg mb-8 ">
         <Balancer>The important (and sometimes not so important) parts of existence</Balancer>
       </h2>
-      <TagFilter url="literature"></TagFilter>
+      <TagFilter url="meta"></TagFilter>
 
       {allMeta
         .sort((a, b) => {
@@ -41,7 +41,7 @@ export default function Client() {
           return postHasActive;
         })
         .map((post) => (
-          <PostCard key={post.title} postUrl={`/literature/${post.slug}`} url="literature" tag={post.tags} title={post.title} image={post.image} desc={post.summary}></PostCard>
+          <PostCard key={post.title} postUrl={`/meta/${post.slug}`} url="meta" tag={post.tags} title={post.title} image={post.image} desc={post.summary}></PostCard>
         ))}
     </section>
   );
