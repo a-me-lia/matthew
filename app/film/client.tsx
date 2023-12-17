@@ -14,9 +14,9 @@ export default function Client() {
 
   return (
     <section className="min-h-[200vh] bg-white mx-4 md:mx-auto md:w-[742px]  relative pt-32 ">
-      <H1>blog :w:</H1>
+      <H1>film :p</H1>
       <h2 className=" text-lg mb-8 ">
-        <Balancer> read about the world. and sometimes shrimp.</Balancer>
+        <Balancer>sadly, no IMAX 70mm here</Balancer>
       </h2>
       <TagFilter url="blog"></TagFilter>
 
