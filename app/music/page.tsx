@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-
 
 
 export const metadata: Metadata = {
@@ -15,9 +13,9 @@ export default async function BlogPage() {
       <h3 className="mb-4 mt-8">Select repritoopeore</h3>
       <ul>
         <li>Rachmanioff Piano Concerto 3, op.30</li>
-        <li>Chopin Ballade No.1, op. 23</li>
-        <li>Chopin Etude op. 25, No. 11 "Vent de l'hiver"</li>
-        <li>"Suzume", arrangement and medly for the piano</li>
+        <li>Chopin Ballade No. 1, op. 23</li>
+        <li>Chopin Etude op. 25, No. 11 &ldquo;Vent de l&apos;hiver&rdquo;</li>
+        <li>&ldquo;Suzume&rdquo;, arrangement and medley for the piano</li>
         <li>Rachmanioff Prelude No. 5, op. 23</li>
         <li>Scriabin Etude No. 12, op. 8</li>
       </ul>

@@ -42,7 +42,7 @@ export default function Client() {
           return postHasActive;
         })
         .map((post) => (
-          <PostCard postUrl={`/blog/${post.slug}`} url="blog" tag={post.tags} title={post.title} image={post.image} desc={post.summary}></PostCard>
+          <PostCard key={post.title} postUrl={`/blog/${post.slug}`} url="blog" tag={post.tags} title={post.title} image={post.image} desc={post.summary}></PostCard>
         ))}
     </section>
   );
