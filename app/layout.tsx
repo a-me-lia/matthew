@@ -59,6 +59,9 @@ export default function RootLayout({
         <Navbar/>
           {children}
         <Footer/>
+        <div className='md:hidden fixed top-0 left-0 h-screen w-screen  z-[60] bg-white flex flex-row items-center justify-center px-6'>
+          <div>Sorry, this website is not yet available for mobile. Please check back later.</div>
+        </div>
       </body>
     </html>
   );
