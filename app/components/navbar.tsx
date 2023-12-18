@@ -61,7 +61,7 @@ export default function Navbar() {
       <div className="md:mx-auto md:w-[742px]  mx-4 h-max  flex flex-col fixed right-0 top-0 left-0 z-50 md:mt-8 mt-10 p-4  rounded-2xl bg-black/20 ">
         <div className="flex flex-row ">
           <div className="flex flex-row items-baseline -mr-6 ">
-            <Link href={"/"} className="md:block hidden" id="homescree.net">
+            <Link href={"/"} className="md:block hidden" id="matthewguo.com">
               matthewguo.com&nbsp; / &nbsp;
             </Link>
 

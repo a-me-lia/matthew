@@ -19,10 +19,10 @@ const computedFields = {
       dateModified: doc.publishedAt,
       description: doc.summary,
       image: doc.image
-        ? `https://homescree.net/${doc.image}`
-        : `https://homescree.net/og?title=${doc.title}`,
+        ? `https://matthewguo.com/${doc.image}`
+        : `https://matthewguo.com/og?title=${doc.title}`,
       tags: doc.tags,
-      url: `https://homescree.net/blog/${doc._raw.flattenedPath}`,
+      url: `https://matthewguo.com/blog/${doc._raw.flattenedPath}`,
       author: {
         "@type": "Person",
         name: "Matthew Guo",
