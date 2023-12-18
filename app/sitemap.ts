@@ -12,7 +12,7 @@ export default async function sitemap() {
   }));
 
   const metas = allMeta.map((post) => ({
-    url: `https://matthewguo.com/meta/${post.slug}`,
+    url: `https://matthewguo.com/life/${post.slug}`,
     lastModified: post.publishedAt,
   }));
 
@@ -26,7 +26,7 @@ export default async function sitemap() {
     "/blog",
     "/music",
     "/film",
-    "/meta",
+    "/life",
     "/contact",
   ].map((route) => ({
     url: `https://matthewguo.com${route}`,

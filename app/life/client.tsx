@@ -13,9 +13,9 @@ export default function Client() {
 
   return (
     <section className="min-h-[200vh] bg-white mx-4 md:mx-auto md:w-[742px]  relative pt-32 ">
-      <H1>Meta stuff: Literature and Art</H1>
+      <H1>Stuff about life and living: Literature and Art</H1>
       <h2 className=" text-lg mb-8 ">
-        <Balancer>The important (and sometimes not so important) parts of existence</Balancer>
+        <Balancer>The important (and sometimes not so important) parts of existence (A dropdown is coming soon for all the catagories!)</Balancer>
       </h2>
       <TagFilter url="meta"></TagFilter>
 
