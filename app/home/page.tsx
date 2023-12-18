@@ -39,7 +39,8 @@ export default function Page(){
         </div>
         </Link>
             <section id="next" className="w-[742px] mx-auto mt-48">
-                <h1 className="mb-4">Hey, it&apos;s Matt!</h1>
+                <h1 className="mb-4 text-[20px]">Hey, it&apos;s Matthew!</h1>
+                <p className="mb-4">I enjoy improving the efficiency of everything, performing piano, and taking part-time jobs. </p>
                 <p>This website is still a work-in-progress, but you can take a look at some pages up already now. She won&apos;t mind if you take a peek :p</p>
                 <ul>
                     {/* <li><Link href=></Link></li> */}

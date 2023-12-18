@@ -110,6 +110,20 @@ function ImageWithCaption(props: any) {
   );
 }
 
+function HalfSizeImage(props:any){
+  return(
+    <div className="relative mt-6 w-1/2 h-72">
+          <Image
+          src={props.src}
+          alt={props.alt}
+          fill
+          {...props}
+          className="object-cover rounded-lg"
+        ></Image>
+    </div>
+  )
+}
+
 const components = {
   a: CustomLink,
   p: CustomP,
@@ -119,6 +133,7 @@ const components = {
   ul: CustomUl,
   hr: CustomHr,
   Image: ImageWithCaption,
+  HalfImage: HalfSizeImage,
   Link: CustomLink,
   Inline: InlineLink,
 };
