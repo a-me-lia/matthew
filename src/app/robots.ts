@@ -5,7 +5,7 @@ export default function robots() {
         userAgent: "*",
       },
     ],
-    sitemap: "https://yoaso.bi/sitemap.xml",
-    host: "https://yoaso.bi",
+    sitemap: "https://matthewguo.com/sitemap.xml",
+    host: "https://matthewguo.com",
   };
 }

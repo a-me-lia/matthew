@@ -13,15 +13,15 @@ const plexMono = IBM_Plex_Mono({
 
 
 export const metadata: Metadata = {
-  title: "YOASOBI",
-  description: "",
-  keywords: ['YOASOBI', 'jpop', 'fan site', 'yoasobi', 'into the night', 'yoaso.bi'],
+  title: "Matthew Guo",
+  description: "Matthew Guo ] Coming Soon!",
+  keywords: ['Matthew', 'Guo', 'MAtthew Guo', 'Engineering', 'Embedded Systems'],
   openGraph: {
-    title: "YOASOBI",
-    description: "The official unoffical YOASOBI fansite",
-    url: "https://yoaso.bi",
-    images: "https://yoaso.bi/favicon.ico",
-    siteName: "YOASO.BI",
+    title: "Matthew Guo",
+    description: "Matthew Guo ] Coming Soon!",
+    url: "https://matthewguo.com",
+    images: "https://matthewguo.com/favicon.ico",
+    siteName: "matthewguo.com",
     locale: "en-US",
     type: "website",
   },
@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans text-neutral-800  ${plexMono.variable} font-ibm`}>{children}
-      <p className='text-white z-50 text-opacity-30 text-[12px] absolute bottom-2 left-2'>Matthew Guo @ <Link className='hover:underline' href='https://homescree.net'>Homescree.net</Link></p></body>
+      <p className='text-white z-50 text-opacity-30 text-[12px] absolute bottom-2 left-2'>Matthew Guo @ <Link className='hover:underline' href='https://matthewguo.com'>Website</Link></p></body>
     </html>
   )
 }
