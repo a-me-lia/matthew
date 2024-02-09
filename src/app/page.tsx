@@ -33,15 +33,13 @@ export default function Home() {
     <hr className="my-4"/>
     <h2 className="mt-12 mb-4 font-medium text-2xl">Skills</h2>
     <h3 className="mb-2 mt-2 font-medium">Machine languages</h3>
-    <p className="mb-2">Highly proficient in C, C++, Java, JS/TS, and experience in ASM (ARM), Rust, Python, and Perl<br/>
-      Machine and cloud frameworks and architectures</p>
+    <p className="mb-2">Highly proficient in C, C++, Java, JS/TS, and experience in ASM (ARM), Rust, Python, and Perl</p>
     <h3 className="mb-2 mt-2 font-medium">Machine and cloud frameworks and architectures</h3>
     <p className="mb-2">Proficient in STM32 RTOS, Node.JS, Next.JS, React, Node-RED and C/C++ CUDA frameworks<br/>
-      Experience in AWS services including EC2/Lambda compute, S3, Dynamo and API Gateway<br/>
-      Hardware Experience</p>
+      Experience in AWS services including EC2/Lambda compute, S3, Dynamo and API Gateway</p>
     <h3 className="mb-2 mt-2 font-medium">Hardware Experience</h3>
-    <p className="mb-2">Highly experienced and proficient in the analysis, debugging and verification chip-to-chip protocols such as U(S)ART, I2C, SPI using spectrum analysis and JTAG boundary scan tools.</p>
-    <p className="mb-2">Experience in design of hardware PHYs for USB3.2, PCIe 3.0, Ethernet 2500, HDMI/DSP and DSI/CSI ultra-high-speed protocols.</p>
+    <p className="mb-2">Highly experienced and proficient in the analysis, debugging and verification of chip-to-chip protocols such as U(S)ART, I2C, SPI using spectrum analysis and JTAG boundary scan tools.</p>
+    <p className="mb-2">Experience in design of hardware PHYs for USB3.2, PCIe 3.0, Ethernet 2500, HDMI/DSP and DSI/CSI LVDS and ETH PHY MPII ultra-high-speed protocols.</p>
     <h3 className="mb-2 mt-2 font-medium">Client Facing Skills</h3>
     <p className="mb-2">Excellent at achieving understanding of a technical solution in a team among all levels of<br/>
       technicality as well as to non-technical clients, and meeting consistent, accurate time predictions</p>
