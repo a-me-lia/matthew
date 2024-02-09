@@ -20,10 +20,9 @@ export default function Home() {
       <SignUpButton text='Sign up for updates!' ></SignUpButton>
     </div>
 
-    <div>
 
-  <div>
-    <h1 class="mt-4 mb-2">Matthew Guo</h1>
+
+<h1 class="mt-4 mb-2">Matthew Guo</h1>
     <h3 class="mb-2">CV - Markdown Version - ver.2024.01.02A</h3>
     <p class="mb-2">Tel: +1 (919) 909 8638<br>
       E-mail (primary): <a href="mailto:matthewguo.x86@gmail.com" class="text-blue-500">matthewguo.x86@gmail.com</a><br>
@@ -103,8 +102,7 @@ export default function Home() {
       Expected graduation June 2025</p>
     <p class="mb-2">Relevant coursework:<br>
       AP Computer Science A: 5.0/5.0</p>
-  </div>
-    </div>
+
 </main>
   )
 }
