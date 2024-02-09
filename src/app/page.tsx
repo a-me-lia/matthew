@@ -89,7 +89,7 @@ export default function Home() {
       contact info on request</p>
     <h2 className="mt-12 mb-4 font-medium text-2xl">Awards/Certifications</h2>
     <h3 className="mb-2 mt-2 font-medium">Amazon Web Services</h3>
-    <p className="mb-2">Solutions architect (CO-03) [EXPECTED 24/02/01]</p>
+    <p className="mb-2">Solutions architect (CO-03) [EXPECTED 24/05/01]</p>
     <h3 className="mb-2 mt-2 font-medium">2023 North American Virtuoso Piano Competition</h3>
     <p className="mb-2">Youth, 2nd Prize</p>
     <h3 className="mb-2 mt-2 font-medium">2024 MAA AMC 12</h3>
