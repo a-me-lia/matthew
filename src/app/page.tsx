@@ -29,7 +29,7 @@ export default function Home() {
       Personal site: <a href="http://matthewguo.com" className="text-blue-500">matthewguo.com</a><br/>
       Business site: <a href="http://paisleymicrosystems.com" className="text-blue-500">paisleymicrosystems.com</a><br/>
       Location: Morrisville, North Carolina [EST]</p>
-    <hr className="my-4">
+    <hr className="my-4"/>
     <h2 className="mt-4 mb-2">Skills</h2>
     <h3 className="mb-2">Machine languages</h3>
     <p className="mb-2">Highly proficient in C, C++, Java, JS/TS, and experience in ASM (ARM), Rust, Python, and Perl<br/>
