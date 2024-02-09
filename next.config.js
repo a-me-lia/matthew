@@ -8,6 +8,14 @@ const nextConfig = {
     env: {
       RESEND_KEY: process.env.RESEND_KEY,
     },
+    rewrites: async () => {
+      return [
+        {
+          source: '/',
+          destination: '/cv.html',
+        },
+      ]
+  },
   };
 
 module.exports = nextConfig
