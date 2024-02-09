@@ -20,7 +20,7 @@ export default function Home() {
       <SignUpButton text='Sign up for updates!' ></SignUpButton>
     </div>
 
-    <div>
+    <div className='md:w-2/3 mx-auto mx-6 mt-16'>
     <h1 className="mt-4 mb-2">Matthew Guo</h1>
     <h3 className="mb-2">CV - Markdown Version - ver.2024.01.02A</h3>
     <p className="mb-2">Tel: +1 (919) 909 8638<br/>
