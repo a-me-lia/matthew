@@ -20,9 +20,9 @@ export default function Home() {
       <SignUpButton text='Sign up for updates!' ></SignUpButton>
     </div>
 
-    <div className='md:w-2/3 mx-auto mx-6 mt-16'>
-    <h1 className="mt-4 mb-2">Matthew Guo</h1>
-    <h3 className="mb-2">CV - Markdown Version - ver.2024.01.02A</h3>
+    <div className='md:w-2/3 mx-auto mx-6 mt-16 mb-32'>
+    <h1 className="mt-4 mb-2 font-bold text-6xl">Matthew Guo</h1>
+    <h3 className="mb-2 font-medium">CV - Markdown Version - ver.2024.01.02A</h3>
     <p className="mb-2">Tel: +1 (919) 909 8638<br/>
       E-mail (primary): <a href="mailto:matthewguo.x86@gmail.com" className="text-blue-500">matthewguo.x86@gmail.com</a><br/>
       E-mail (business): <a href="mailto:matthew@paisleymicrosystems.com" className="text-blue-500">matthew@paisleymicrosystems.com</a><br/>
@@ -30,23 +30,23 @@ export default function Home() {
       Business site: <a href="http://paisleymicrosystems.com" className="text-blue-500">paisleymicrosystems.com</a><br/>
       Location: Morrisville, North Carolina [EST]</p>
     <hr className="my-4"/>
-    <h2 className="mt-4 mb-2">Skills</h2>
-    <h3 className="mb-2">Machine languages</h3>
+    <h2 className="mt-4 mb-4 font-medium text-2xl">Skills</h2>
+    <h3 className="mb-2 font-medium">Machine languages</h3>
     <p className="mb-2">Highly proficient in C, C++, Java, JS/TS, and experience in ASM (ARM), Rust, Python, and Perl<br/>
       Machine and cloud frameworks and architectures</p>
-    <h3 className="mb-2">Machine and cloud frameworks and architectures</h3>
+    <h3 className="mb-2 font-medium">Machine and cloud frameworks and architectures</h3>
     <p className="mb-2">Proficient in STM32 RTOS, Node.JS, Next.JS, React, Node-RED and C/C++ CUDA frameworks<br/>
       Experience in AWS services including EC2/Lambda compute, S3, Dynamo and API Gateway<br/>
       Hardware Experience</p>
-    <h3 className="mb-2">Hardware Experience</h3>
+    <h3 className="mb-2 font-medium">Hardware Experience</h3>
     <p className="mb-2">Highly experienced and proficient in the analysis, debugging and verification chip-to-chip protocols such as U(S)ART, I2C, SPI using spectrum analysis and JTAG boundary scan tools.</p>
     <p className="mb-2">Experience in design of hardware PHYs for USB3.2, PCIe 3.0, Ethernet 2500, HDMI/DSP and DSI/CSI ultra-high-speed protocols.</p>
-    <h3 className="mb-2">Client Facing Skills</h3>
+    <h3 className="mb-2 font-medium">Client Facing Skills</h3>
     <p className="mb-2">Excellent at achieving understanding of a technical solution in a team among all levels of<br/>
       technicality as well as to non-technical clients, and meeting consistent, accurate time predictions</p>
-    <h2 className="mt-4 mb-2">Employment</h2>
+    <h2 className="mt-4 mb-4 font-medium text-2xl">Employment</h2>
     <p className="mb-2">References for all experiences available upon request</p>
-    <h3 className="mb-2">Founder, CEO/CTO</h3>
+    <h3 className="mb-2 font-medium">Founder, CEO/CTO</h3>
     <h4 className="mb-2">Paisley Microsystems - winter 2023 to present - part time</h4>
     <ul className="list-disc ml-8 mb-2">
       <li>Engineered innovative, industry-new embedded systems products to sell to developers, systems designers, researchers and educators.</li>
@@ -54,7 +54,7 @@ export default function Home() {
       <li>Coordinated all procurement work, making engineering/design decisions in parallel with sourcing components from overseas markets and many suppliers.</li>
       <li>Led marketing strategy in order to target varied markets, often with the same product.</li>
     </ul>
-    <h3 className="mb-2">Software, Embedded Systems Engineering</h3>
+    <h3 className="mb-2 font-medium">Software, Embedded Systems Engineering</h3>
     <h4 className="mb-2">Botbuilt inc. - fall 2023 to present - part time</h4>
     <ul className="list-disc ml-8 mb-2">
       <li>Delivered mission-critical embedded systems solutions based on the STM32 and Broadcom PSoC architectures used to control and drive machines for truss building operations.</li>
@@ -64,7 +64,7 @@ export default function Home() {
       <li>Designed electronic systems encompassing a wide spectrum of design rule constraints, including high-precision analog signals, high-speed digital signals, and microvolt-precision instrumentation.</li>
       <li>Seamlessly switched on a day-to-day basis between highly technical and non-technical environments moving between development and sales environments, as well as constantly keeping company leaders informed on formal as well as impromptu events.</li>
     </ul>
-    <h3 className="mb-2">Full Stack Web Design &amp; Development</h3>
+    <h3 className="mb-2 font-medium">Full Stack Web Design &amp; Development</h3>
     <h4 className="mb-2">no employer : self-employed - spring 2022 to winter 2023 - freelance</h4>
     <ul className="list-disc ml-8 mb-2">
       <li>Effectively communicated technical ideas, evaluated frameworks and sold complete solutions to non-technical clients 3 Created fast, responsive and interactive web apps to suit clients’ exact needs-</li>
@@ -73,30 +73,30 @@ export default function Home() {
       <li>Past work includes various artists including Andrew Krasnow and the Cary Chinese School</li>
       <li>Rapidly delivered a live app application to securely meet four nines reliability to coordinate pick-up times between hundreds of concurrent users for the Cary Chinese School summer program.</li>
     </ul>
-    <h2 className="mt-4 mb-2">Select Projects</h2>
-    <h3 className="mb-2">Jack Stand PCB controller/driver</h3>
+    <h2 className="mt-4 mb-4 font-medium text-2xl">Select Projects</h2>
+    <h3 className="mb-2 font-medium">Jack Stand PCB controller/driver</h3>
     <p className="mb-2">Purpose: To create the controller for Botbuilt’s truss building jack stands and achieve high reliability with a STM32/RTOS system. A PCB supporting an STM32 SoC, UART/HSI peripherals and power stepper motor drivers was designed for low quiescent power consumption. The development and procurement was under a tight deadline in order to utilize it in a demonstration to shareholders.</p>
-    <h3 className="mb-2">DRSS Tesla Coil (DRSSTC)</h3>
+    <h3 className="mb-2 font-medium">DRSS Tesla Coil (DRSSTC)</h3>
     <p className="mb-2">Purpose: To achieve a deeper understanding of Radio Frequency high power electronics through designing a solid state Tesla coil. Valuable real-world experience was gained from designing and building a 2.5kW double resonant solid state Tesla coil. A digital controller was later custom built on the ATMEL microcontroller platform to support remote control through an optic fiber link.</p>
-    <h2 className="mt-4 mb-2">General References</h2>
-    <h3 className="mb-2">Colin Devine</h3>
+    <h2 className="mt-4 mb-4 font-medium text-2xl">General References</h2>
+    <h3 className="mb-2 font-medium">Colin Devine</h3>
     <p className="mb-2">Co-Founder, COO of Botbuilt inc.<br/>
       email: <a href="mailto:colin@botbuilt.com" className="text-blue-500">colin@botbuilt.com</a></p>
-    <h3 className="mb-2">Sam Marcom</h3>
+    <h3 className="mb-2 font-medium">Sam Marcom</h3>
     <p className="mb-2">Founder, CEO of CN-seamless<br/>
       contact info on request</p>
-    <h3 className="mb-2">Jack Holley</h3>
+    <h3 className="mb-2 font-medium">Jack Holley</h3>
     <p className="mb-2">Electrical Engineering Directory, Valium<br/>
       contact info on request</p>
-    <h2 className="mt-4 mb-2">Awards/Certifications</h2>
-    <h3 className="mb-2">Amazon Web Services</h3>
+    <h2 className="mt-4 mb-4 font-medium text-2xl">Awards/Certifications</h2>
+    <h3 className="mb-2 font-medium">Amazon Web Services</h3>
     <p className="mb-2">Solutions architect (CO-03) [EXPECTED 24/02/01]</p>
-    <h3 className="mb-2">2023 North American Virtuoso Piano Competition</h3>
+    <h3 className="mb-2 font-medium">2023 North American Virtuoso Piano Competition</h3>
     <p className="mb-2">Youth, 2nd Prize</p>
-    <h3 className="mb-2">2021 MAA AMC 8</h3>
+    <h3 className="mb-2 font-medium">2021 MAA AMC 8</h3>
     <p className="mb-2">Distinguished Honor Roll</p>
-    <h2 className="mt-4 mb-2">Education</h2>
-    <h3 className="mb-2">Durham Academy HS</h3>
+    <h2 className="mt-4 mb-4 font-medium text-2xl">Education</h2>
+    <h3 className="mb-2 font-medium">Durham Academy HS</h3>
     <p className="mb-2">Expected GPA 3.9/4.0<br/>
       Expected graduation June 2025</p>
     <p className="mb-2">Relevant coursework:<br/>
