@@ -17,10 +17,11 @@ export default function Home() {
 
     <div className='relative flex flex-col items-center justify-center z-50 h-full space-y-8'>
       <h1 className='font-mono md:text-7xl text-2xl font-medium text-white  text-shadow '>Coming Soon</h1>
+      <h1 className=' font-medium text-white text-2xl'>Scroll down for CV :p</h1>
       <SignUpButton text='Sign up for updates!' ></SignUpButton>
     </div>
 
-    <div className='md:w-2/3 mx-auto mx-6 mt-16 mb-32'>
+    <div className='md:w-2/3 mx-auto mx-6 mt-16 pb-32'>
     <h1 className="mt-4 mb-2 font-bold text-6xl">Matthew Guo</h1>
     <h3 className="mb-2 font-medium">CV - Markdown Version - ver.2024.01.02A</h3>
     <p className="mb-2">Tel: +1 (919) 909 8638<br/>
@@ -30,7 +31,7 @@ export default function Home() {
       Business site: <a href="http://paisleymicrosystems.com" className="text-blue-500">paisleymicrosystems.com</a><br/>
       Location: Morrisville, North Carolina [EST]</p>
     <hr className="my-4"/>
-    <h2 className="mt-4 mb-4 font-medium text-2xl">Skills</h2>
+    <h2 className="mt-12 mb-4 font-medium text-2xl">Skills</h2>
     <h3 className="mb-2 font-medium">Machine languages</h3>
     <p className="mb-2">Highly proficient in C, C++, Java, JS/TS, and experience in ASM (ARM), Rust, Python, and Perl<br/>
       Machine and cloud frameworks and architectures</p>
@@ -44,7 +45,7 @@ export default function Home() {
     <h3 className="mb-2 font-medium">Client Facing Skills</h3>
     <p className="mb-2">Excellent at achieving understanding of a technical solution in a team among all levels of<br/>
       technicality as well as to non-technical clients, and meeting consistent, accurate time predictions</p>
-    <h2 className="mt-4 mb-4 font-medium text-2xl">Employment</h2>
+    <h2 className="mt-12 mb-4 font-medium text-2xl">Employment</h2>
     <p className="mb-2">References for all experiences available upon request</p>
     <h3 className="mb-2 font-medium">Founder, CEO/CTO</h3>
     <h4 className="mb-2">Paisley Microsystems - winter 2023 to present - part time</h4>
@@ -73,12 +74,12 @@ export default function Home() {
       <li>Past work includes various artists including Andrew Krasnow and the Cary Chinese School</li>
       <li>Rapidly delivered a live app application to securely meet four nines reliability to coordinate pick-up times between hundreds of concurrent users for the Cary Chinese School summer program.</li>
     </ul>
-    <h2 className="mt-4 mb-4 font-medium text-2xl">Select Projects</h2>
+    <h2 className="mt-12 mb-4 font-medium text-2xl">Select Projects</h2>
     <h3 className="mb-2 font-medium">Jack Stand PCB controller/driver</h3>
     <p className="mb-2">Purpose: To create the controller for Botbuilt’s truss building jack stands and achieve high reliability with a STM32/RTOS system. A PCB supporting an STM32 SoC, UART/HSI peripherals and power stepper motor drivers was designed for low quiescent power consumption. The development and procurement was under a tight deadline in order to utilize it in a demonstration to shareholders.</p>
     <h3 className="mb-2 font-medium">DRSS Tesla Coil (DRSSTC)</h3>
     <p className="mb-2">Purpose: To achieve a deeper understanding of Radio Frequency high power electronics through designing a solid state Tesla coil. Valuable real-world experience was gained from designing and building a 2.5kW double resonant solid state Tesla coil. A digital controller was later custom built on the ATMEL microcontroller platform to support remote control through an optic fiber link.</p>
-    <h2 className="mt-4 mb-4 font-medium text-2xl">General References</h2>
+    <h2 className="mt-12 mb-4 font-medium text-2xl">General References</h2>
     <h3 className="mb-2 font-medium">Colin Devine</h3>
     <p className="mb-2">Co-Founder, COO of Botbuilt inc.<br/>
       email: <a href="mailto:colin@botbuilt.com" className="text-blue-500">colin@botbuilt.com</a></p>
@@ -88,14 +89,14 @@ export default function Home() {
     <h3 className="mb-2 font-medium">Jack Holley</h3>
     <p className="mb-2">Electrical Engineering Directory, Valium<br/>
       contact info on request</p>
-    <h2 className="mt-4 mb-4 font-medium text-2xl">Awards/Certifications</h2>
+    <h2 className="mt-12 mb-4 font-medium text-2xl">Awards/Certifications</h2>
     <h3 className="mb-2 font-medium">Amazon Web Services</h3>
     <p className="mb-2">Solutions architect (CO-03) [EXPECTED 24/02/01]</p>
     <h3 className="mb-2 font-medium">2023 North American Virtuoso Piano Competition</h3>
     <p className="mb-2">Youth, 2nd Prize</p>
     <h3 className="mb-2 font-medium">2021 MAA AMC 8</h3>
     <p className="mb-2">Distinguished Honor Roll</p>
-    <h2 className="mt-4 mb-4 font-medium text-2xl">Education</h2>
+    <h2 className="mt-12 mb-4 font-medium text-2xl">Education</h2>
     <h3 className="mb-2 font-medium">Durham Academy HS</h3>
     <p className="mb-2">Expected GPA 3.9/4.0<br/>
       Expected graduation June 2025</p>
